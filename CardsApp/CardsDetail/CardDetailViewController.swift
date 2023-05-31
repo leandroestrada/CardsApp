@@ -45,6 +45,8 @@ class CardDetailViewController: UIViewController {
     }
 
     private func setupViews() {
+        
+        view.backgroundColor = .systemBackground
         view.addSubview(nameLabel)
         view.addSubview(cardSetLabel)
         view.addSubview(typeLabel)
