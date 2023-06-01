@@ -13,14 +13,15 @@ class CardCell: UITableViewCell {
     
     private let nameLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 16, weight: .bold)
+        label.font = UIFont.preferredFont(forTextStyle: .headline)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
     private let typeLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 14)
+        label.font = UIFont.preferredFont(forTextStyle: .subheadline)
+        label.textColor = .gray
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -28,10 +29,13 @@ class CardCell: UITableViewCell {
     private let cardImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
+        imageView.layer.shadowColor = UIColor.black.cgColor
+        imageView.layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
+        imageView.layer.shadowOpacity = 0.5
+        imageView.layer.shadowRadius = 4.0
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
-    
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -51,18 +55,19 @@ class CardCell: UITableViewCell {
     
     private func setupConstraints() {
         NSLayoutConstraint.activate([
-            nameLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
+            nameLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
             nameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
-            nameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
+            nameLabel.trailingAnchor.constraint(equalTo: cardImageView.leadingAnchor, constant: -16),
             
             typeLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 4),
-            typeLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
-            typeLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
-            typeLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8),
+            typeLabel.leadingAnchor.constraint(equalTo: nameLabel.leadingAnchor),
+            typeLabel.trailingAnchor.constraint(equalTo: nameLabel.trailingAnchor),
+            typeLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -16),
+            
             cardImageView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
-            cardImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10),
-            cardImageView.heightAnchor.constraint(equalToConstant: 90),
-            cardImageView.widthAnchor.constraint(equalToConstant: 90)
+            cardImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
+            cardImageView.heightAnchor.constraint(equalToConstant: 70),
+            cardImageView.widthAnchor.constraint(equalToConstant: 70)
         ])
     }
     
