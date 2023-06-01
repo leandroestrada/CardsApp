@@ -19,7 +19,19 @@
 		306680FD2A27B52B00DD318A /* CardDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306680FC2A27B52B00DD318A /* CardDetailViewController.swift */; };
 		306680FF2A27B73D00DD318A /* CardDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306680FE2A27B73D00DD318A /* CardDetailViewModel.swift */; };
 		3066810A2A27CD7A00DD318A /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306681092A27CD7A00DD318A /* NetworkConstants.swift */; };
+		306681122A2851D900DD318A /* CardDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306681112A2851D900DD318A /* CardDetailViewModelTests.swift */; };
+		306681192A28536B00DD318A /* CardsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306681182A28536B00DD318A /* CardsViewModelTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		306681132A2851D900DD318A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 306680D52A279DD300DD318A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 306680DC2A279DD300DD318A;
+			remoteInfo = CardsApp;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		306680DD2A279DD300DD318A /* CardsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,10 +48,20 @@
 		306680FC2A27B52B00DD318A /* CardDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailViewController.swift; sourceTree = "<group>"; };
 		306680FE2A27B73D00DD318A /* CardDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailViewModel.swift; sourceTree = "<group>"; };
 		306681092A27CD7A00DD318A /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
+		3066810F2A2851D900DD318A /* CardsAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CardsAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		306681112A2851D900DD318A /* CardDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailViewModelTests.swift; sourceTree = "<group>"; };
+		306681182A28536B00DD318A /* CardsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		306680DA2A279DD300DD318A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3066810C2A2851D900DD318A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -53,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				306680DF2A279DD300DD318A /* CardsApp */,
+				306681102A2851D900DD318A /* CardsAppTests */,
 				306680DE2A279DD300DD318A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				306680DD2A279DD300DD318A /* CardsApp.app */,
+				3066810F2A2851D900DD318A /* CardsAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -133,6 +157,15 @@
 			name = Files;
 			sourceTree = "<group>";
 		};
+		306681102A2851D900DD318A /* CardsAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				306681112A2851D900DD318A /* CardDetailViewModelTests.swift */,
+				306681182A28536B00DD318A /* CardsViewModelTests.swift */,
+			);
+			path = CardsAppTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -153,6 +186,24 @@
 			productReference = 306680DD2A279DD300DD318A /* CardsApp.app */;
 			productType = "com.apple.product-type.application";
 		};
+		3066810E2A2851D900DD318A /* CardsAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 306681152A2851D900DD318A /* Build configuration list for PBXNativeTarget "CardsAppTests" */;
+			buildPhases = (
+				3066810B2A2851D900DD318A /* Sources */,
+				3066810C2A2851D900DD318A /* Frameworks */,
+				3066810D2A2851D900DD318A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				306681142A2851D900DD318A /* PBXTargetDependency */,
+			);
+			name = CardsAppTests;
+			productName = CardsAppTests;
+			productReference = 3066810F2A2851D900DD318A /* CardsAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -165,6 +216,10 @@
 				TargetAttributes = {
 					306680DC2A279DD300DD318A = {
 						CreatedOnToolsVersion = 14.3;
+					};
+					3066810E2A2851D900DD318A = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 306680DC2A279DD300DD318A;
 					};
 				};
 			};
@@ -182,6 +237,7 @@
 			projectRoot = "";
 			targets = (
 				306680DC2A279DD300DD318A /* CardsApp */,
+				3066810E2A2851D900DD318A /* CardsAppTests */,
 			);
 		};
 /* End PBXProject section */
@@ -193,6 +249,13 @@
 			files = (
 				306680ED2A279DD500DD318A /* LaunchScreen.storyboard in Resources */,
 				306680EA2A279DD500DD318A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3066810D2A2851D900DD318A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,7 +279,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3066810B2A2851D900DD318A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				306681192A28536B00DD318A /* CardsViewModelTests.swift in Sources */,
+				306681122A2851D900DD318A /* CardDetailViewModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		306681142A2851D900DD318A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 306680DC2A279DD300DD318A /* CardsApp */;
+			targetProxy = 306681132A2851D900DD318A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		306680EB2A279DD500DD318A /* LaunchScreen.storyboard */ = {
@@ -398,6 +478,42 @@
 			};
 			name = Release;
 		};
+		306681162A2851D900DD318A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5F3426985K;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.leandro.test.CardsAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CardsApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CardsApp";
+			};
+			name = Debug;
+		};
+		306681172A2851D900DD318A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5F3426985K;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.leandro.test.CardsAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CardsApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CardsApp";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -415,6 +531,15 @@
 			buildConfigurations = (
 				306680F22A279DD500DD318A /* Debug */,
 				306680F32A279DD500DD318A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		306681152A2851D900DD318A /* Build configuration list for PBXNativeTarget "CardsAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				306681162A2851D900DD318A /* Debug */,
+				306681172A2851D900DD318A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
